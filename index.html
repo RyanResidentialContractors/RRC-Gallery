@@ -70,10 +70,24 @@
     }
 
     .gallery img,
-    .gallery video {
+    .gallery iframe {
       width: 100%;
       border-radius: 6px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .gallery iframe {
+      aspect-ratio: 16 / 9;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     video {
@@ -98,21 +112,7 @@
 
   <main class="gallery">
     <!-- Videos (shown first) -->
-    <iframe width="100%" height="506" src="https://www.youtube.com/embed/buXvVNvoCHI" title="Project Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-    <iframe width="100%" height="506" src="https://www.youtube.com/embed/6eAV2V1lB_Y" title="Project Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-    <iframe width="100%" height="506" src="https://www.youtube.com/embed/7Ye9qi08Qdo" title="Project Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
-    <!-- Photos -->
-
-    <img src="images/photo1.jpg" alt="Project photo 1" />
-    <img src="images/photo2.jpg" alt="Project photo 2" />
-    <img src="images/photo3.jpg" alt="Project photo 3" />
-    <img src="images/photo4.jpg" alt="Project photo 4" />
-    <img src="images/photo5.jpg" alt="Project photo 5" />
-    <img src="images/photo6.jpg" alt="Project photo 6" />
+    <iframe src="https://www.youtube.com/embed/7Ye9qi08Qdo?autoplay=1&mute=1&rel=0&playsinline=1" title="Project Video 3" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>" alt="Project photo 6" />
   </main>
 
 </body>
